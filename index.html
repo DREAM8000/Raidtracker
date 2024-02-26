@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by DREAM E</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaidWatch 3.0</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <video autoplay muted loop id="videoFondo">
+    <source src="video_fondo.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+
+  <header>
+    <h1>RaidWatch 3.0</h1>
+  </header>
+
+  <section id="registro">
+    <h2>Registro de Actividades</h2>
+    <form id="formularioRegistro" action="guardar_actividad.php" method="post">
+      <label for="nombre_club">Nombre del Club:</label><br>
+      <input type="text" id="nombre_club" name="nombre_club" required><br>
+      <label for="descripcion">Descripción de la Actividad:</label><br>
+      <textarea id="descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+      <input type="submit" value="Guardar Actividad">
+    </form>
+  </section>
+
+  <section id="actividadesRegistradas">
+    <h2>Actividades Registradas</h2>
+    <ul>
+      <?php include 'mostrar_actividades.php'; ?>
+    </ul>
+  </section>
+
+  <footer>
+    <p>¡Juntos podemos mantener la seguridad en línea y proteger nuestra comunidad virtual!</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
